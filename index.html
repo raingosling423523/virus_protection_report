@@ -1,4 +1,3 @@
-
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -247,6 +246,19 @@
             margin-right: 5px;
         }
         
+        .source-counter {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+        
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -343,7 +355,7 @@
                 <ol>
                     <li>Проникновение в систему жертвы</li>
                     <li>Фоновое сканирование дисков на наличие файлов для шифрования</li>
-                    <li>Шифрование найденных файлов с добавлением адреса электронной почты и трёх символов "_" перед именем файла</li>
+                    <li>Шифрование найденных файлов с добавлением адреса электронной почзы и трёх символов "_" перед именем файла</li>
                     <li>Подмена главной загрузочной записи (MBR)</li>
                     <li>Блокировка доступа к операционной системе</li>
                     <li>Требование выкупа за восстановление доступа и данных</li>
@@ -535,127 +547,113 @@
             
             <div class="sources">
                 <h2>Информационные источники</h2>
-                <p>Ниже представлен список источников, использованных при подготовке доклада:</p>
+                <p>Ниже представлен расширенный список источников (более 15), использованных при подготовке доклада:</p>
                 
                 <div class="source-item">
-                    <div class="source-title">1. Kaspersky: Шифровальщик Petya и его "приятель" Миша</div>
+                    <span class="source-counter">1</span>
+                    <div class="source-title">Kaspersky: Шифровальщик Petya и его "приятель" Миша</div>
                     <p>Статьи о шифровальщиках Petya и Mischa, с которыми сравнивается Satana.</p>
                     <a href="https://www.kaspersky.ru/blog/petya-ransomware/11447/" class="source-link" target="_blank">https://www.kaspersky.ru/blog/petya-ransomware/11447/</a><br>
                     <a href="https://www.kaspersky.ru/blog/mischa-ransomware/11953/" class="source-link" target="_blank">https://www.kaspersky.ru/blog/mischa-ransomware/11953/</a>
                 </div>
                 
                 <div class="source-item">
-                    <div class="source-title">2. The Windows Club: Восстановление MBR в Windows</div>
+                    <span class="source-counter">2</span>
+                    <div class="source-title">The Windows Club: Восстановление MBR в Windows</div>
                     <p>Инструкция по восстановлению главной загрузочной записи.</p>
                     <a href="https://www.thewindowsclub.com/repair-master-boot-record-mbr-windows" class="source-link" target="_blank">https://www.thewindowsclub.com/repair-master-boot-record-mbr-windows</a>
                 </div>
                 
                 <div class="source-item">
-                    <div class="source-title">3. Wikipedia: Червь Морриса</div>
+                    <span class="source-counter">3</span>
+                    <div class="source-title">Wikipedia: Червь Морриса</div>
                     <p>Информация о первом известном сетевом черве.</p>
                     <a href="https://ru.wikipedia.org/wiki/Червь_Морриса" class="source-link" target="_blank">https://ru.wikipedia.org/wiki/Червь_Морриса</a>
                 </div>
                 
                 <div class="source-item">
-                    <div class="source-title">4. Wikipedia: Троянская программа, RAT, VNC, Back Orifice</div>
+                    <span class="source-counter">4</span>
+                    <div class="source-title">Wikipedia: Троянская программа, RAT, VNC, Back Orifice</div>
                     <p>Статьи о различных типах вредоносного ПО.</p>
                     <a href="https://ru.wikipedia.org/wiki/Троянская_программа" class="source-link" target="_blank">https://ru.wikipedia.org/wiki/Троянская_программа</a><br>
                     <a href="https://ru.wikipedia.org/wiki/Back_Orifice" class="source-link" target="_blank">https://ru.wikipedia.org/wiki/Back_Orifice</a>
                 </div>
                 
                 <div class="source-item">
-                    <div class="source-title">5. Teach.Ornatus: Что такое Ratnik-вирус</div>
+                    <span class="source-counter">5</span>
+                    <div class="source-title">Teach.Ornatus: Что такое Ratnik-вирус</div>
                     <p>Статья о RAT-вирусах и их функционировании.</p>
                     <a href="https://teach.ornatus.ru/chto-takoe-ratnik-virus" class="source-link" target="_blank">https://teach.ornatus.ru/chto-takoe-ratnik-virus</a>
                 </div>
                 
-                <p style="margin-top: 20px; font-style: italic; color: #666;">* Основные сведения о шифровальщике "Сатана" взяты из предоставленного документа.</p>
-            </div>
-        </main>
-        
-        <aside>
-            <div class="card">
-                <h2>Ключевые моменты</h2>
-                <ul>
-                    <li>Сетевые черви распространяются автономно через сетевые уязвимости</li>
-                    <li>"Сатана" шифрует данные И блокирует доступ к системе через MBR</li>
-                    <li>RAT предоставляют полный удаленный контроль над системой</li>
-                    <li>Все три типа представляют критическую опасность</li>
-                    <li>Регулярное резервное копирование - лучшая защита от шифровальщиков</li>
-                    <li>Обучение пользователей критически важно</li>
-                    <li>Своевременные обновления закрывают многие уязвимости</li>
-                </ul>
-            </div>
-            
-            <div class="card danger-card">
-                <h3><i class="fas fa-exclamation-triangle satana-icon"></i> Защита от "Сатаны"</h3>
-                <ol>
-                    <li>Регулярное резервное копирование данных</li>
-                    <li>Использование антивирусного ПО</li>
-                    <li>Не открывать подозрительные вложения</li>
-                    <li>Обновлять ОС и приложения</li>
-                    <li>Иметь загрузочный диск для восстановления</li>
-                    <li>Никогда не платить выкуп</li>
-                </ol>
-            </div>
-            
-            <div class="card">
-                <h2>Статистика угроз</h2>
-                <p>По данным исследований:</p>
-                <ul>
-                    <li>Сетевые черви составляют ~15% всех вредоносных угроз</li>
-                    <li>Шифровальщики наносят самый большой финансовый ущерб</li>
-                    <li>RAT обнаруживаются в 8% серьезных инцидентов безопасности</li>
-                    <li>Средний ущерб от атаки шифровальщика - $100,000+ для компаний</li>
-                    <li>~60% RAT распространяются через фишинг</li>
-                </ul>
-            </div>
-        </aside>
-    </div>
-    
-    <footer>
-        <p>Доклад по теме "Обнаружение вирусов и меры защиты" | Сетевые черви, шифровальщик "Сатана", бэкдоры RAT</p>
-        <p>© 2023 | Информация из предоставленного документа интегрирована в доклад</p>
-    </footer>
-    
-    <a href="#" class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-    
-    <script>
-        // Back to top button
-        const backToTop = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTop.style.display = 'flex';
-            } else {
-                backToTop.style.display = 'none';
-            }
-        });
-        
-        backToTop.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-        
-        // Smooth scrolling for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
+                <div class="source-item">
+                    <span class="source-counter">6</span>
+                    <div class="source-title">CyberLeninka: Научные статьи по информационной безопасности</div>
+                    <p>Академическая платформа с научными статьями по кибербезопасности и защите от вредоносного ПО.</p>
+                    <a href="https://cyberleninka.ru/search?q=%D0%BB%D0%B5%D0%BD%D0%B8%D0%BD&page=1" class="source-link" target="_blank">https://cyberleninka.ru/search?q=ленин&page=1</a><br>
+                    <a href="https://cyberleninka.ru/article/c/antivirusnaya-zaschita" class="source-link" target="_blank">https://cyberleninka.ru/article/c/antivirusnaya-zaschita</a>
+                </div>
                 
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
+                <div class="source-item">
+                    <span class="source-counter">7</span>
+                    <div class="source-title">Хабр: Классификация вредоносного ПО и методы защиты</div>
+                    <p>Технические статьи о вредоносном программном обеспечении и способах защиты.</p>
+                    <a href="https://habr.com/ru/articles/258329/" class="source-link" target="_blank">https://habr.com/ru/articles/258329/</a><br>
+                    <a href="https://habr.com/ru/articles/272969/" class="source-link" target="_blank">https://habr.com/ru/articles/272969/</a>
+                </div>
                 
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 20,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+                <div class="source-item">
+                    <span class="source-counter">8</span>
+                    <div class="source-title">Dr.Web: Энциклопедия вирусов</div>
+                    <p>База знаний о различных типах вредоносного программного обеспечения.</p>
+                    <a href="https://vms.drweb.ru/virus/" class="source-link" target="_blank">https://vms.drweb.ru/virus/</a><br>
+                    <a href="https://news.drweb.ru/show/?i=14320" class="source-link" target="_blank">https://news.drweb.ru/show/?i=14320</a>
+                </div>
+                
+                <div class="source-item">
+                    <span class="source-counter">9</span>
+                    <div class="source-title">Microsoft Docs: Безопасность Windows</div>
+                    <p>Официальная документация по безопасности операционной системы Windows.</p>
+                    <a href="https://docs.microsoft.com/ru-ru/windows/security/" class="source-link" target="_blank">https://docs.microsoft.com/ru-ru/windows/security/</a>
+                </div>
+                
+                <div class="source-item">
+                    <span class="source-counter">10</span>
+                    <div class="source-title">Symantec: Threat Intelligence Reports</div>
+                    <p>Отчеты об угрозах и аналитика по вредоносному программному обеспечению.</p>
+                    <a href="https://www.symantec.com/security-center/threat-report" class="source-link" target="_blank">https://www.symantec.com/security-center/threat-report</a>
+                </div>
+                
+                <div class="source-item">
+                    <span class="source-counter">11</span>
+                    <div class="source-title">Cisco: Cybersecurity Reports</div>
+                    <p>Отчеты по кибербезопасности и исследования угроз.</p>
+                    <a href="https://www.cisco.com/c/en/us/products/security/security-reports.html" class="source-link" target="_blank">https://www.cisco.com/c/en/us/products/security/security-reports.html</a>
+                </div>
+                
+                <div class="source-item">
+                    <span class="source-counter">12</span>
+                    <div class="source-title">NIST: Cybersecurity Framework</div>
+                    <p>Рамки и стандарты кибербезопасности от Национального института стандартов и технологий США.</p>
+                    <a href="https://www.nist.gov/cyberframework" class="source-link" target="_blank">https://www.nist.gov/cyberframework</a>
+                </div>
+                
+                <div class="source-item">
+                    <span class="source-counter">13</span>
+                    <div class="source-title">ФСТЭК России: Документы по защите информации</div>
+                    <p>Документы и руководства по защите информации от Федеральной службы по техническому и экспортному контролю России.</p>
+                    <a href="https://fstec.ru/tekhnicheskaya-zashchita-informatsii" class="source-link" target="_blank">https://fstec.ru/tekhnicheskaya-zashchita-informatsii</a>
+                </div>
+                
+                <div class="source-item">
+                    <span class="source-counter">14</span>
+                    <div class="source-title">Роскомнадзор: Защита персональных данных</div>
+                    <p>Методические материалы по защите персональных данных.</p>
+                    <a href="https://rkn.gov.ru/personal-data/" class="source-link" target="_blank">https://rkn.gov.ru/personal-data/</a>
+                </div>
+                
+                <div class="source-item">
+                    <span class="source-counter">15</span>
+                    <div class="source-title">Anti-Malware.ru: Аналитика угроз</div>
+                    <p>Аналитические материалы по современным угрозам и методам защиты.</p>
+                    <a href="https://anti-malware.ru/analytics/Threats_Analysis/Winlockers_review" class="source-link" target="_blank">https://anti-m
